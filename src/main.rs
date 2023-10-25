@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let remove_prefix = regex::Regex::new("[0-9]+ +")?;
+    let remove_prefix = regex::Regex::new("[0-9a-f]+ +")?;
 
     for (i, line) in std::io::stdin().lines().enumerate() {
         let line = line?;
