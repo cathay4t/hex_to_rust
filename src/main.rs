@@ -10,9 +10,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             continue;
         }
         if i != 0 {
-            print!(",\n");
+            print!(",\n ");
         }
-        print!("{}", if i == 0 { "[" } else { " " });
         for (j, hex_str) in line.split(" ").enumerate() {
             if j != 0 {
                 print!(", ");
@@ -20,6 +19,5 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             print!("0x{hex_str}");
         }
     }
-    println!("]");
     Ok(())
 }
